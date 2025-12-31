@@ -22,9 +22,6 @@ test:
   
 cellIdPreamble: "cell-"
 cells: 
-  drawio:
-    link:
-      url: "https://app.diagrams.net/?p=svgdata"
   LoadBalancer:
     dataRef: "test-data-large-sin"
     label:
@@ -38,26 +35,8 @@ cells:
     link: *grafana-home
   lb_wd0019371:
     dataRef: "test-data-large-cos"
-    label:
-      separator: "cr"
-      units: "ops"
-    fillColor:
-      thresholds:
-        - {color: "semi-dark-green", level: 0}
-        - {color: "orange", level: 400}
-        - {color: "red", level: 800}
-    link: *grafana-home
   lb_wd0019372:
     dataRef: "test-data-large-cos"
-    label:
-      separator: "cr"
-      units: "ops"
-    fillColor:
-      thresholds:
-        - {color: "semi-dark-green", level: 0}
-        - {color: "orange", level: 400}
-        - {color: "red", level: 800}
-    link: *grafana-home
   wd0019371:
     dataRef: "test-data-small-cos"
     label:
