@@ -21,7 +21,6 @@ test:
   testDataBaseOffset: 1
   
 cellIdPreamble: "cell-"
-gradientMode: "hue"
 cells: 
   drawio:
     link:
