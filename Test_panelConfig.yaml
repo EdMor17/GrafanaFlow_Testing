@@ -34,9 +34,9 @@ cells:
         - {color: "red", level: 1000}
     link: *grafana-home
   lb_wd0019371:
-    dataRef: "test-data-large-cos"
+    dataRef: "test-data-small-sin"
   lb_wd0019372:
-    dataRef: "test-data-large-cos"
+    dataRef: "test-data-small-sin"
   wd0019371:
     dataRef: "test-data-small-cos"
     label:
