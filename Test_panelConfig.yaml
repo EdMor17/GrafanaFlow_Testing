@@ -44,9 +44,10 @@ cells:
       units: "none"
     labelColor:
       thresholds:
-        - {color: "#888888", level: 0}
-        - {color: "light-blue", level: 100}
-      link: *grafana-home
+        - {color: "green", level: 0}
+        - {color: "orange", level: 500}
+        - {color: "red", level: 1000}
+    link: *grafana-home
   wd0019372:
     dataRef: "test-data-large-sin"
     label:
@@ -54,6 +55,7 @@ cells:
       units: "none"
     labelColor:
       thresholds:
-        - {color: "#888888", level: 0}
-        - {color: "light-blue", level: 100}
+        - {color: "green", level: 0}
+        - {color: "orange", level: 500}
+        - {color: "red", level: 1000}
     link: *grafana-home
