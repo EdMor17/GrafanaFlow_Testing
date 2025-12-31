@@ -26,7 +26,7 @@ cells:
     link:
       url: "https://app.diagrams.net/?p=svgdata"
   LoadBalancer:
-    dataRef: "flow_query_test"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "none"
@@ -37,7 +37,7 @@ cells:
         - {color: "red", level: 1000}
     link: *grafana-home
   lb_wd0019371:
-    dataRef: "flow_query_test"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "ops"
@@ -48,7 +48,7 @@ cells:
         - {color: "red", level: 800}
     link: *grafana-home
   lb_wd0019372:
-    dataRef: "flow_query_test"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "ops"
@@ -59,7 +59,7 @@ cells:
         - {color: "red", level: 800}
     link: *grafana-home
   wd0019371:
-    dataRef: "flow_query_test"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "none"
@@ -68,7 +68,7 @@ cells:
         - {color: "#888888", level: 0}
         - {color: "light-blue", level: 100}
   wd0019372:
-    dataRef: "flow_query_test"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "none"
