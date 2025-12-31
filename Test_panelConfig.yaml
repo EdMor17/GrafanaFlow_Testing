@@ -32,7 +32,6 @@ cells:
       separator: "cr"
       units: "none"
     labelColor:
-      gradientMode: "hue"
       thresholds:
         - {color: "green", level: 0}
         - {color: "orange", level: 500}
