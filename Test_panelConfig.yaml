@@ -46,6 +46,7 @@ cells:
       thresholds:
         - {color: "#888888", level: 0}
         - {color: "light-blue", level: 100}
+      link: *grafana-home
   wd0019372:
     dataRef: "test-data-large-sin"
     label:
@@ -55,3 +56,4 @@ cells:
       thresholds:
         - {color: "#888888", level: 0}
         - {color: "light-blue", level: 100}
+    link: *grafana-home
