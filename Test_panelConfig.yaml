@@ -8,14 +8,16 @@ anchorLinks:
       url: "https://grafana.com/"
       params: "time"
   - flowAnimation: &flow-slow
-      thresholdOffValue: 2
-      thresholdLwrValue: 10
+      thresholdOffValue: 1
+      thresholdLwrValue: 2
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
-      thresholdUprDurationSecs: 0.1
+      thresholdUprDurationSecs: 1
 
 #------------------------------------------------------------------------------
 # Panel Config
+
+datapoint: "last"
 
 test:
   testDataBaseOffset: 1
@@ -23,7 +25,7 @@ test:
 cellIdPreamble: "cell-"
 cells: 
   LoadBalancer:
-    dataRef: "test-data-large-sin"
+    dataRef: "test-data-large-cos"
     label:
       separator: "cr"
       units: "none"
@@ -32,30 +34,38 @@ cells:
         - {color: "green", level: 0}
         - {color: "orange", level: 500}
         - {color: "red", level: 1000}
-    link: *grafana-home
   lb_wd0019371:
     dataRef: "test-data-large-cos"
+    flowAnimation:
+      thresholdOffValue: 10
+      thresholdLwrValue: 100
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 600
+      thresholdUprDurationSecs: 0.1
   lb_wd0019372:
     dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+    labelColor:
+      thresholds:
+        - {color: "pink", level: 0}
+        - {color: "red", level: 100}
   wd0019371:
-    dataRef: "test-data-large-sin"
+    dataRef: "test-data-small-cos"
     label:
       separator: "cr"
       units: "none"
     labelColor:
       thresholds:
-        - {color: "green", level: 0}
-        - {color: "orange", level: 500}
-        - {color: "red", level: 1000}
-    link: *grafana-home
+        - {color: "red", level: 0}
+        - {color: "orange", level: 50}
+        - {color: "green", level: 100}
   wd0019372:
-    dataRef: "test-data-large-sin"
+    dataRef: "test-data-small-cos"
     label:
       separator: "cr"
       units: "none"
     labelColor:
       thresholds:
-        - {color: "green", level: 0}
-        - {color: "orange", level: 500}
-        - {color: "red", level: 1000}
-    link: *grafana-home
+        - {color: "red", level: 0}
+        - {color: "orange", level: 50}
+        - {color: "green", level: 100}
