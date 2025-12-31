@@ -38,7 +38,7 @@ cells:
   lb_wd0019372:
     dataRef: "test-data-large-cos"
   wd0019371:
-    dataRef: "test-data-small-cos"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "none"
@@ -47,7 +47,7 @@ cells:
         - {color: "#888888", level: 0}
         - {color: "light-blue", level: 100}
   wd0019372:
-    dataRef: "test-data-small-cos"
+    dataRef: "test-data-large-sin"
     label:
       separator: "cr"
       units: "none"
