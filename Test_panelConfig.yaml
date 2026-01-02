@@ -14,6 +14,13 @@ anchorLinks:
       thresholdUprValue: 100
       thresholdUprDurationSecs: 1
 
+zoomPanPinch:
+  # This optional term defines the array of keys that can be used to enable wheel zoom. There's
+  # a clash of interest between panel zoom and dashboard scrolling which is easy to avoid with small
+  # SVGs, but becomes more problematic when the SVG is large and covers a lot of the screen. By
+  # requiring a combo such as ALT+Scroll this clash can be avoided. 
+  wheelActivationKeys: ["Alt"]
+
 #------------------------------------------------------------------------------
 # Panel Config
 
@@ -36,36 +43,29 @@ cells:
         - {color: "red", level: 1000}
   lb_wd0019371:
     dataRef: "test-data-large-cos"
-    flowAnimation:
-      thresholdOffValue: 10
-      thresholdLwrValue: 100
-      thresholdLwrDurationSecs: 1
-      thresholdUprValue: 600
-      thresholdUprDurationSecs: 0.1
+    flowAnimation: *flow-slow
   lb_wd0019372:
     dataRef: "test-data-large-cos"
     flowAnimation: *flow-slow
-    labelColor:
-      thresholds:
-        - {color: "pink", level: 0}
-        - {color: "red", level: 100}
   wd0019371:
-    dataRef: "test-data-small-cos"
+    dataRef: "HealthyAPIs"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019371&var-Filters="
     label:
       separator: "cr"
       units: "none"
     labelColor:
       thresholds:
         - {color: "red", level: 0}
-        - {color: "orange", level: 50}
-        - {color: "green", level: 100}
+        - {color: "green", level: 4}
   wd0019372:
-    dataRef: "test-data-small-cos"
+    dataRef: "HealthyAPIs"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019372&var-Filters="
     label:
       separator: "cr"
       units: "none"
     labelColor:
       thresholds:
         - {color: "red", level: 0}
-        - {color: "orange", level: 50}
-        - {color: "green", level: 100}
+        - {color: "green", level: 4}
