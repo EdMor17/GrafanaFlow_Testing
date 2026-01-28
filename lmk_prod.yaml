@@ -1,0 +1,127 @@
+---
+
+#------------------------------------------------------------------------------
+# YAML Aliases to simplify maintenance
+
+anchorLinks:
+  - link: &grafana-home
+      url: "https://grafana.com/"
+      params: "time"
+  - flowAnimation: &flow-slow
+      thresholdOffValue: 1
+      thresholdLwrValue: 2
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 1
+
+zoomPanPinch:
+  # This optional term defines the array of keys that can be used to enable wheel zoom. There's
+  # a clash of interest between panel zoom and dashboard scrolling which is easy to avoid with small
+  # SVGs, but becomes more problematic when the SVG is large and covers a lot of the screen. By
+  # requiring a combo such as ALT+Scroll this clash can be avoided. 
+  wheelActivationKeys: ["Alt"]
+
+#------------------------------------------------------------------------------
+# Panel Config
+
+datapoint: "last"
+
+test:
+  testDataBaseOffset: 1
+  
+cellIdPreamble: "cell-"
+cells: 
+  LoadBalancer:
+    dataRef: "test-data-large-cos"
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "green", level: 0}
+        - {color: "orange", level: 500}
+        - {color: "red", level: 1000}
+  lb_wp0019375:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  lb_wp0019376:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  lb_wp0019377:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  lb_wp0019378:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  lb_wp0019379:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  lb_wp0019380:
+    dataRef: "test-data-large-cos"
+    flowAnimation: *flow-slow
+  wp0019375:
+    dataRef: "wp-0019375"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019371&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
+  wp0019376:
+    dataRef: "wp-0019376"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019372&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
+  wp0019377:
+    dataRef: "wp-0019377"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019371&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
+  wp0019378:
+    dataRef: "wp-0019378"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019372&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
+  wp0019379:
+    dataRef: "wp-0019379"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019371&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
+  wp0019380:
+    dataRef: "wp-0019380"
+    link: 
+      url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019372&var-Filters="
+    label:
+      separator: "cr"
+      units: "none"
+    labelColor:
+      thresholds:
+        - {color: "red", level: 0}
+        - {color: "green", level: 4}
