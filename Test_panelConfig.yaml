@@ -48,7 +48,7 @@ cells:
     dataRef: "test-data-large-cos"
     flowAnimation: *flow-slow
   wd0019371:
-    dataRef: "200"
+    dataRef: "wd-0019371"
     link: 
       url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019371&var-Filters="
     label:
@@ -59,7 +59,7 @@ cells:
         - {color: "red", level: 0}
         - {color: "green", level: 4}
   wd0019372:
-    dataRef: "503"
+    dataRef: "wd-0019372"
     link: 
       url: "https://arguspreprod.grafana.net/d/Mofp2p5/em-testing-copy?orgId=1&from=now-3h&to=now&timezone=browser&var-instance=wd-0019372&var-Filters="
     label:
