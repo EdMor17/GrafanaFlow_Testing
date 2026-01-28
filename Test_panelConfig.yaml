@@ -57,7 +57,7 @@ cells:
     labelColor:
       thresholds:
         - {color: "red", level: 0}
-        - {color: "green", level: 4}
+        - {color: "green", level: 1}
   wd0019372:
     dataRef: "wd-0019372"
     link: 
@@ -68,4 +68,4 @@ cells:
     labelColor:
       thresholds:
         - {color: "red", level: 0}
-        - {color: "green", level: 4}
+        - {color: "green", level: 1}
